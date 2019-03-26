@@ -1,0 +1,81 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>注册</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="borderB">
+    <div>
+      <input class="myInput" placeholder="请输入字母、数字组成的用户名"  (blur)="checkName()" [(ngModel)]="userName" (focus)="hiddenName()" [class.nameClick]="nameClick">
+      <img src="assets/ic_username.png" class="logo"/>
+      <img src="assets/imgs/dianjin_dui.png" class="logo_Check" *ngIf="nameRight"/>
+      <div style="color: red;margin-left:40px" *ngIf="ifName">{{ifNameText}}</div>
+    </div>
+    <div style="position: relative">
+      <input class="myInput" placeholder="请输入密码" (blur)="checkPass()" [(ngModel)]="password" (focus)="hiddenPass()" type="password" [class.nameClick]="passClick">
+      <img src="assets/ic_password.png" class="logo1"/>
+      <div style="color: red;margin-left:40px" *ngIf="ifPass">{{ifPassText}}</div>
+    </div>
+    <div style="position: relative">
+      <input class="myInput" placeholder="请输入公司全称" (blur)="checkCom()" [(ngModel)]="company" (focus)="hiddenCom()" [class.nameClick]="companyClick">
+      <img src="assets/imgs/ic_store.png" class="logo2"/>
+      <div style="color: red;margin-left:40px" *ngIf="ifCom">{{ifComText}}</div>
+    </div>
+    <div style="position: relative">
+      <input class="myInput" placeholder="请输入手机号"  (blur)="checkTelephone()" [(ngModel)]="telephone" (focus)="hiddenTel()" [class.nameClick]="phoneClick">
+      <img src="assets/ic_phone.png" class="logo3"/>
+      <img src="assets/imgs/dianjin_dui.png" class="logo_Check" *ngIf="telRight"/>
+      <div style="color: red;margin-left:40px" *ngIf="ifTel">{{ifTelText}}</div>
+    </div>
+    <div style="margin-top: 15px;position: relative">
+      <input class="myInput1" placeholder="请输入验证码" (blur)="checkCode()" [(ngModel)]="code" (focus)="hiddenCode()" [class.nameClick]="codeClick">
+      <span  (click)="verifyCode()" class="myBut">{{codeMessage}}</span>
+      <img src="assets/imgs/code.png"  class="logo5"/>
+
+      <img src="assets/imgs/dianjin_dui.png" class="logo_Check1" *ngIf="codeRight"/>
+      <div style="color: red;margin-left:40px" *ngIf="ifCode">{{ifCodeText}}</div>
+    </div>
+    <div style="position: relative">
+      <div class="myInput2" (click)="mySelect()">{{comfirmName}}</div>
+      <img src="assets/imgs/dianjinLocation.png" class="logo4"/>
+    </div>
+    <div class="bottomRegister">
+      <div class="regBut" (click)="goRegister()">
+        提交
+      </div>
+    </div>
+    <div class="click">
+      <ion-checkbox [(ngModel)]="isChecked"></ion-checkbox>
+      <span style="margin-left: 8px">阅读并同意</span>
+      <span style="color: deepskyblue;text-align:left"  (click)="goReadMe()">《点金保理服务协议》</span>
+
+    </div>
+  </div>
+</ion-content>
+<div class="help" *ngIf="showSelect" (click)="closeSelect()"></div>
+<div class="bottomSelect" *ngIf="showSelect">
+  <div class="bottomSelect_toolbar">
+    <ion-grid style="height: 100%;width: 100%">
+      <ion-row>
+        <ion-col col-4 class="myCol" style="color:#FF5F07;justify-content: flex-start" (click)="closeSelect()">取消</ion-col>
+        <ion-col col-4 class="myCol">选择地区</ion-col>
+        <ion-col col-4 class="myCol" style="color:#FF5F07;justify-content: flex-end" (click)="comfirm()">确定</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="personList">
+    <div *ngFor="let i of personList" class="personItem" (click)="changeList(i)">
+      {{i.name}}
+    </div>
+  </div>
+</div>
