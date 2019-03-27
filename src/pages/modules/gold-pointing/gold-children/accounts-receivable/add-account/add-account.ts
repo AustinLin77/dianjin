@@ -147,7 +147,7 @@ export class AddAccountPage {
   getBuyer(){
     let that = this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/receive/getBuyer',
+      url: GlobalVariable.dianjinHeader+'app/receive/getBuyer',
       data: {},
       type: "get",
       success: function (res) {
@@ -162,7 +162,7 @@ export class AddAccountPage {
   selectDept(){
     let that = this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/receive/getBuyer?buyerName='+this.buyerName,
+      url: GlobalVariable.dianjinHeader+'app/receive/getBuyer?buyerName='+this.buyerName,
       data: {},
       type: "get",
       success: function (res) {
@@ -222,7 +222,7 @@ export class AddAccountPage {
     console.log(GlobalVariable.dianjinCodeData);
     let that = this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/receive/checkInvoice',
+      url: GlobalVariable.dianjinHeader+'app/receive/checkInvoice',
       type: "post",
       contentType: "application/json;charset=utf-8",
       data : JSON.stringify( GlobalVariable.dianjinCodeData),
@@ -282,7 +282,7 @@ export class AddAccountPage {
     };
     let that = this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/receive/save?userId='+localStorage.getItem("userId"),
+      url: GlobalVariable.dianjinHeader+'app/receive/save?userId='+localStorage.getItem("userId"),
       type: "post",
       contentType: "application/json;charset=utf-8",
       data : JSON.stringify( totalData),

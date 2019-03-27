@@ -47,7 +47,7 @@ export class IssueManagementPage {
     });
     loading.present();
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/finance/todoList',
+      url: GlobalVariable.dianjinHeader+'app/finance/todoList',
       // '?roleName='+this.roleName+'&name='+this.name+'&pageSize='+this.pageSize+'$pageNo='+this.pageNo,
       data: {
         loginName:this.loginName,
@@ -108,7 +108,7 @@ export class IssueManagementPage {
       infiniteScroll.enable(false);
     }else{
       $.ajax({
-        url: GlobalVariable.dianjinHeader+'factoring/app/finance/todoList',
+        url: GlobalVariable.dianjinHeader+'app/finance/todoList',
         data: {
           loginName:this.loginName,
           matType :this.statuId,

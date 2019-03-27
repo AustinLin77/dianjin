@@ -67,7 +67,7 @@ export class AccountsReceivableDetailsPage {
   save(){
     let that = this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/receive/update?id='+this.data.id+'&sendDate='+this.myDateStart+'&receivedDate='+this.myDateEnd,
+      url: GlobalVariable.dianjinHeader+'app/receive/update?id='+this.data.id+'&sendDate='+this.myDateStart+'&receivedDate='+this.myDateEnd,
       data: {},
       type: "get",
       success: function (res) {
@@ -83,7 +83,7 @@ export class AccountsReceivableDetailsPage {
   opinion(){
     let that = this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/receive/confirm?id='+this.data.id+'&expendStatus=0',
+      url: GlobalVariable.dianjinHeader+'app/receive/confirm?id='+this.data.id+'&expendStatus=0',
       data: {},
       type: "get",
       success: function (res) {
@@ -130,7 +130,7 @@ export class AccountsReceivableDetailsPage {
     });
     loading.present();
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/receive/audit?id='+this.data.id+'&expendStatus='+status+'&userId='+this.userId,
+      url: GlobalVariable.dianjinHeader+'app/receive/audit?id='+this.data.id+'&expendStatus='+status+'&userId='+this.userId,
       data: {},
       type: "get",
       success: function (res) {

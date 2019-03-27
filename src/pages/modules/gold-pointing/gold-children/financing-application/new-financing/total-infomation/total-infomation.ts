@@ -132,7 +132,7 @@ export class TotalInfomationPage {
   getSubmitData(){
     let that = this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/finance/toAdd?userId='+localStorage.getItem("userId"),
+      url: GlobalVariable.dianjinHeader+'app/finance/toAdd?userId='+localStorage.getItem("userId"),
       type: "get",
       data : {},
       success: function (res) {
@@ -161,7 +161,7 @@ export class TotalInfomationPage {
     }else{
       let that = this;
       $.ajax({
-        url: GlobalVariable.dianjinHeader+'factoring/app/finance/save?billFlag=fill&loginName='+localStorage.getItem("username"),
+        url: GlobalVariable.dianjinHeader+'app/finance/save?billFlag=fill&loginName='+localStorage.getItem("username"),
         type: "post",
         contentType: "application/json;charset=utf-8",
         data : JSON.stringify( GlobalVariable.dianjinRongziData),

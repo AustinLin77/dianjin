@@ -74,7 +74,7 @@ export class IssueManagementDetailsPage {
     });
     loading.present();
     $.ajax({
-      url:GlobalVariable.dianjinHeader+'factoring/app/finance/handleTask?loginName='+this.loginName+'&pId='+this.data.pId+'&taskId='+this.data.taskId+'&isPass='+status+'&comment='+opinion,
+      url:GlobalVariable.dianjinHeader+'app/finance/handleTask?loginName='+this.loginName+'&pId='+this.data.pId+'&taskId='+this.data.taskId+'&isPass='+status+'&comment='+opinion,
       data: {},
       type: "get",
       success: function (res) {

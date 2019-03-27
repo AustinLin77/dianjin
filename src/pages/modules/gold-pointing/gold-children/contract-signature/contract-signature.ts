@@ -74,7 +74,7 @@ export class ContractSignaturePage {
     }
     this.paramData=data;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/contract/list',
+      url: GlobalVariable.dianjinHeader+'app/contract/list',
       data:data,
       type: "get",
       success: function (res) {
@@ -185,7 +185,7 @@ export class ContractSignaturePage {
       infiniteScroll.enable(false);
     }else{
       $.ajax({
-        url: GlobalVariable.dianjinHeader+'factoring/app/contract/list',
+        url: GlobalVariable.dianjinHeader+'app/contract/list',
         data:data,
         type: "get",
         success: function (res) {
@@ -202,7 +202,7 @@ export class ContractSignaturePage {
     let that = this;
     var myData;
       $.ajax({
-        url: GlobalVariable.dianjinHeader+'factoring/app/finance/detail?id='+data.id+'&processInstanceId='+data.processInstanceId,
+        url: GlobalVariable.dianjinHeader+'app/finance/detail?id='+data.id+'&processInstanceId='+data.processInstanceId,
         data: {},
         type: "get",
         success: function (res) {

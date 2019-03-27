@@ -50,7 +50,7 @@ export class ContractSignatureDetailsPage {
     });
     loading.present();
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/contract/syncsigndoc?id='+this.data.id,
+      url: GlobalVariable.dianjinHeader+'app/contract/syncsigndoc?id='+this.data.id,
       data: {},
       type: "get",
       success: function (res) {
@@ -86,7 +86,7 @@ export class ContractSignatureDetailsPage {
     });
     loading.present();
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/contract/SignContract',
+      url: GlobalVariable.dianjinHeader+'app/contract/SignContract',
       data: data,
       type: "get",
       success: function (res) {
@@ -116,7 +116,7 @@ export class ContractSignatureDetailsPage {
     });
     loading.present();
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/contract/viewContract?notaryid='+this.data.notaryid,
+      url: GlobalVariable.dianjinHeader+'app/contract/viewContract?notaryid='+this.data.notaryid,
       data: {},
       type: "get",
       success: function (res) {

@@ -2,7 +2,7 @@
 export class GlobalVariable {
 public static shopCount:number=0;
 
-public static dianjinHeader:string='http://mystudy666.natapp1.cc/';
+public static dianjinHeader:string='http://mytest888.natapp1.cc/factor/';
 public static dianjinHeadData = {
   totalPrice:0,
   type:"",

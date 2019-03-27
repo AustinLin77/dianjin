@@ -85,7 +85,7 @@ export class FinancingApplicationPage {
       }
     }
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/finance/list',
+      url: GlobalVariable.dianjinHeader+'app/finance/list',
       data: data,
       type: "get",
       success: function (res) {
@@ -153,7 +153,7 @@ export class FinancingApplicationPage {
       infiniteScroll.enable(false);
     }else{
       $.ajax({
-        url: GlobalVariable.dianjinHeader+'factoring/app/finance/list',
+        url: GlobalVariable.dianjinHeader+'app/finance/list',
         data: data,
         type: "get",
         success: function (res) {
@@ -186,7 +186,7 @@ export class FinancingApplicationPage {
       }
     }
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/finance/list',
+      url: GlobalVariable.dianjinHeader+'app/finance/list',
       data: data,
       type: "get",
       success: function (res) {

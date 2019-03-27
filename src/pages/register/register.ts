@@ -77,7 +77,7 @@ export class RegisterPage {
     }else{
       this.isDisable=!this.isDisable;
       $.ajax({
-        url: 'http://mystudy666.natapp1.cc/factoring/a/sys/register/getRegisterCode?mobile='+this.telephone,
+        url: 'http://mytest888.natapp1.cc/factor/a/sys/register/getRegisterCode?mobile='+this.telephone,
         data: {},
         type: "get",
         success: function (res) {

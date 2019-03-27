@@ -71,7 +71,7 @@
         this.statuId=this.already
       }
       $.ajax({
-        url: GlobalVariable.dianjinHeader+'factoring/app/receive/list',
+        url: GlobalVariable.dianjinHeader+'app/receive/list',
         data: {
           companyType: this.roleName,
           name:that.name,
@@ -95,7 +95,7 @@
       console.log(this.statuId);
       let that = this;
       $.ajax({
-        url: GlobalVariable.dianjinHeader+'factoring/app/receive/list',
+        url: GlobalVariable.dianjinHeader+'app/receive/list',
         data: {
           companyType: this.roleName,
           name:that.name,
@@ -220,7 +220,7 @@
         infiniteScroll.enable(false);
       }else{
         $.ajax({
-          url: GlobalVariable.dianjinHeader+'factoring/app/receive/list',
+          url: GlobalVariable.dianjinHeader+'app/receive/list',
           data: param,
           type: "get",
           success: function (res) {
@@ -245,7 +245,7 @@
         this.statuId=this.already
       }
       $.ajax({
-        url: GlobalVariable.dianjinHeader+'factoring/app/receive/list',
+        url: GlobalVariable.dianjinHeader+'app/receive/list',
         data: {
           companyType: this.roleName,
           name:that.name,

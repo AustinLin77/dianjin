@@ -130,7 +130,7 @@ export class BasicInfomationPage {
   getKuaiji(){
     let that = this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/finance/getOfficeTreeData?type=3&parentIds='+this.buyerParentId,
+      url: GlobalVariable.dianjinHeader+'app/finance/getOfficeTreeData?type=3&parentIds='+this.buyerParentId,
       type: "get",
       data : {},
       success: function (res) {

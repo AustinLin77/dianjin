@@ -178,7 +178,7 @@ export class ApplyInfomationPage {
   getManageData(){
     let that = this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/finance/getOfficeTreeData?type=3&parentIds=0,1&name=业务部',
+      url: GlobalVariable.dianjinHeader+'app/finance/getOfficeTreeData?type=3&parentIds=0,1&name=业务部',
       type: "get",
       data : {},
       success: function (res) {

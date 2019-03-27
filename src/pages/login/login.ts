@@ -67,7 +67,7 @@ export class LoginPage {
   login() {
     let that = this;
     $.ajax({
-      url: 'http://mystudy666.natapp1.cc/factoring/app/login',
+      url: 'http://mytest888.natapp1.cc/factor/app/login',
       data: {
         mobileLogin: 'true',
         username:that.userName,

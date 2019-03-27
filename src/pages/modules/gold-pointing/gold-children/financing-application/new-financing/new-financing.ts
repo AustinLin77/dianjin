@@ -42,7 +42,7 @@ export class NewFinancingPage {
   getTicketList(){
     let that=this;
     $.ajax({
-      url: GlobalVariable.dianjinHeader+'factoring/app/finance/receiveAccountList?type=3&sellerName='+localStorage.getItem("name"),
+      url: GlobalVariable.dianjinHeader+'app/finance/receiveAccountList?type=3&sellerName='+localStorage.getItem("name"),
       data: {},
       type: "get",
       success: function (res) {
